@@ -1,2 +1,13 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<p class="offconvase"> CATEGORIES </p>
+<%= form_with model: @groups, url: user_groups_path(@user) do |form|%>
+  <div class="login-header">
+    <%= link_to image_tag("arrow-left.svg", alt: "back", class: "arrow-back"), user_groups_path %>
+    <h2>ADD CATEGROY</h2>
+    <%= form.submit "Save", class:'login-top-btn' %>
+  </div>
+
+    <%= form.text_field :name, placeholder: 'Enter Category name', class: 'form-control'%>
+    <br/>
+    <%= form.file_field :image%>
+
+<%end%>
