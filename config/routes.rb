@@ -1,19 +1,10 @@
 Rails.application.routes.draw do
   get 'splashs/index'
   devise_for :users
-  # devise_for :users
-  # devise_for :users
-  # get 'groups/index'
-  # get 'groups/new'
-  # get 'groups/create'
-  # get 'entities/index'
-  # get 'entities/new'
-  # get 'entities/create'
-  # get 'users/index'
-  # devise_for :users
-  resources :users, only: :index 
+  root 'groups#index'
+  resources :users, only: :index do
     resources :groups, only: [:index, :new, :create, :destroy] do
       resources :entities, only: [:index, :new, :create, :destroy]
     end
-  root "users#index"
+  end
 end
