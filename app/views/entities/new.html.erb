@@ -1,2 +1,17 @@
-<h1>Entities#new</h1>
-<p>Find me in app/views/entities/new.html.erb</p>
+<p class = "offconvase">  TRANSACTIONS </p>
+<%= form_with model: @entity, url: user_group_entities_path do |e| %>
+<div class = "login-header">
+<%= link_to image_tag("arrow-left.svg", alt: "back", class: "arrow-back"), user_group_entities_path %>
+   <h2>ADD TRANSACTION</h2>
+      <%= e.submit "Save", class:'login-top-btn' %>
+    </div>
+
+    <div class="mb-3">
+        <%= e.text_field :name, autofocus: true, class:"form-control",  placeholder:"Transaction name" %>
+    </div> 
+    <div class="mb-3">
+        <%= e.number_field :amount, autofocus: true, class:"form-control",  placeholder:"Transaction amount" %>
+    </div>
+
+<% end %>
+  
