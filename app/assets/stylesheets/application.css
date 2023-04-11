@@ -130,3 +130,32 @@
   height: 45px;
   border: solid 1px white;
 }
+
+.transaction-header{
+  background-color: #a8b4c253;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: var(--appfont);
+  font-weight: 500;
+}
+.bold{
+  font-weight: 900;
+}
+
+.transaction-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #a8b4c253;;
+}
+
+.transaction-btn{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 5px;
+}
