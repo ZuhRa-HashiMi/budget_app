@@ -1,2 +1,11 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<p class="offconvase"> CATEGORIES </p>
+<%@groups.each do |g|%>
+    <div class="category-card">
+        <%= image_tag g.image, class: 'category-image' if g.image.attached?%>
+        <%= link_to g.name, user_group_entities_path(@user, g.id) %>
+        <strong><%= number_to_currency g.entities.where(user: current_user).sum(:amount)%></strong>
+    </div>
+<%end%>
+<div class="category-container">
+    <%= link_to 'Add a new Category', new_user_group_path(@user), class: 'add-category-btn'%>
+</div>
