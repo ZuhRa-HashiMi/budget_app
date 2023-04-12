@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_121318) do
   end
 
   create_table "entities", force: :cascade do |t|
+    t.integer "group_id"
     t.string "name", null: false
     t.integer "amount", null: false
     t.bigint "user_id", null: false
