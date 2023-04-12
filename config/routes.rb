@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'shared/_message'
+  get 'shared/_navbar'
   get 'splashs/index'
   devise_for :users
   root 'groups#index'
