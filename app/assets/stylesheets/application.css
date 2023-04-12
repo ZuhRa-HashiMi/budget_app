@@ -13,91 +13,136 @@
  *= require_tree .
  *= require_self
  */
-
  :root {
-    --primrycolor: #3778c2;
-    --scndrycolor: #5fb523;
-    --fontcolor: #434b54;
-    --appfont: "Roboto", sans-serif;
-  }
-  .splash-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .app-logo {
-    font-family: var(--appfont);
-    position: absolute;
-    font-weight: 700;
-    top: 40%;
-    font-size: 3rem;
-    color: var(--fontcolor);
-  }
-  .splash-btn {
-    position: absolute;
-    bottom: 0%;
-    margin: auto;
-    text-align: center;
-    width: 100%;
-    padding: 0 15px;
-  }
-  .login-btn {
-    background-color: var(--primrycolor);
-    color: #fff;
-    height: 50px;
-    font-size: 1.2rem;
-    padding-top: 10px;
-    font-weight: 300;
-  }
-  .signup-btn {
-    color: var(--fontcolor);
-    height: 50px;
-    font-size: 1.2rem;
-    padding-top: 10px;
-    font-weight: 300;
-  }
-  .login-header {
-    background-color: var(--primrycolor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 5px 3px;
-    margin-bottom: 20px;
-  }
-  
-  .arrow-back {
-    width: 40px;
-    filter: invert(100%) sepia(79%) saturate(100%) hue-rotate(86deg)
-      brightness(100%) contrast(119%);
-  }
-  .login-top-btn {
-    background-color: var(--primrycolor);
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-  }
-  
-  .forgot-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--fontcolor);
-  }
+  --primrycolor: #3778c2;
+  --scndrycolor: #5fb523;
+  --fontcolor: #434b54;
+  --appfont: "Roboto", sans-serif;
+}
+a {
+  color: var(--fontcolor);
+}
 
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.nav-profile,
+.nav-fullname {
+  justify-self: center;
+  align-self: center;
+}
+.nav-fullname-text {
+  color: #fff;
+  font-family: var(--appfont);
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+.category-image {
+  width: 60px;
+  height: 60px;
+}
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-logo {
+  font-family: var(--appfont);
+  position: absolute;
+  font-weight: 700;
+  top: 40%;
+  font-size: 3rem;
+  color: var(--fontcolor);
+}
+.splash-btn {
+  position: absolute;
+  bottom: 0%;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+}
+.login-btn {
+  background-color: var(--primrycolor);
+  color: #fff;
+  height: 50px;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  font-weight: 300;
+}
+.signup-btn {
+  color: var(--fontcolor);
+  height: 50px;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  font-weight: 300;
+}
+.login-header {
+  background-color: var(--primrycolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 5px 3px;
+  margin-bottom: 20px;
+}
+
+.arrow-back {
+  width: 40px;
+  filter: invert(100%) sepia(79%) saturate(100%) hue-rotate(86deg)
+    brightness(100%) contrast(119%);
+}
+.login-top-btn {
+  background-color: var(--primrycolor);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.forgot-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
+.navbar,
+.offcanvas-body,
+.offcanvas {
+  background-color: var(--primrycolor);
+}
+.humberger,
+.closes {
+  filter: invert(100%) sepia(79%) saturate(100%) hue-rotate(86deg)
+    brightness(100%) contrast(119%);
+  width: 30px;
+}
+.closebtn {
+  border: none;
+  background-color: var(--primrycolor);
+}
+.offcanvas-title {
+  color: #fff;
+}
+.nav-links {
+  border: none;
+  background-color: var(--primrycolor);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+}
 .offconvase {
   position: absolute;
   top: 1%;
   left: 30%;
+  color: #fff;
   font-family: var(--appfont);
-  background-color: var(--primrycolor);
   font-size: 1.5rem;
   font-weight: 500;
-  color: white;
 }
-
-.category-card{
+.category-card {
   padding: 10px;
   margin: 10px;
   display: grid;
@@ -108,30 +153,24 @@
   font-family: var(--appfont);
   color: var(--fontcolor);
 }
-
-.category-container{
-  position: absolute;
+.category-container {
   background-color: var(--scndrycolor);
-  padding: 8px;
+  position: absolute;
   bottom: 0;
   height: 60px;
   width: 100%;
+  padding: 8px;
 }
-.category-image{
-  width: 60px;
-  height: 60px;
-}
-.add-category-btn{
+.add-category-btn {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   padding: 5px;
   width: 100%;
   height: 45px;
-  border: solid 1px white;
+  border: solid 1px #fff;
 }
-
-.transaction-header{
+.transaction-header {
   background-color: #a8b4c253;
   display: flex;
   justify-content: space-between;
@@ -140,20 +179,17 @@
   font-family: var(--appfont);
   font-weight: 500;
 }
-.bold{
+.bold {
   font-weight: 900;
 }
-
-.transaction-card{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.transaction-card {
   padding: 10px;
   margin-top: 10px;
-  background-color: #a8b4c253;;
+  display: flex;
+  justify-content: space-between;
+  background-color: #a8b4c253;
 }
-
-.transaction-btn{
+.transaction-btn {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
