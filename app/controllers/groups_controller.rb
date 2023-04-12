@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GroupsController < ApplicationController
   before_action :authenticate_user!
   def index
@@ -14,10 +16,10 @@ class GroupsController < ApplicationController
     @groups = Group.new(group_params)
     @groups.user = current_user
     if @groups.save
-      flash[:notice] = "Category added successfuly!"
+      flash[:notice] = 'Category added successfuly!'
       redirect_to user_groups_path
     else
-      flash[:alert] = "Category declined!"
+      flash[:alert] = 'Category declined!'
       render 'new'
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EntitiesController < ApplicationController
   def index
     @user = current_user
@@ -15,10 +17,10 @@ class EntitiesController < ApplicationController
     @entity.user = current_user
     @entity.groups << Group.find(params[:group_id])
     if @entity.save
-      flash[:notice] = "Transaction added successfuly!"
+      flash[:notice] = 'Transaction added successfuly!'
       redirect_to user_group_entities_path
     else
-      flash[:alert] = "Transaction declined!"
+      flash[:alert] = 'Transaction declined!'
       render 'new'
     end
   end

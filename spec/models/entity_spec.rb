@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
@@ -18,11 +20,9 @@ RSpec.describe Entity, type: :model do
     expect(transaction.errors[:name][0]).to be == "Name can't be blank!"
   end
 
-
   it 'Create an invalid transaction due to wrong amount' do
     transaction = Entity.new(user: @user, group_id: @group.id, name: 'Fruits', amount: '')
     expect(transaction).to be_invalid
     expect(transaction.errors[:amount][0]).to be == 'Amount must be greater than Zero (0)'
   end
-
 end

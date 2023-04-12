@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Transactions pages', type: :feature do
@@ -27,11 +29,11 @@ RSpec.describe 'Transactions pages', type: :feature do
     expect(page).to have_content('TRANSACTIONS')
   end
 
-#   it 'Navigate to add transaction page' do
-#     click_link('add a new transaction')
-#     # @group= Group.all
-#     expect(current_path).to be == user_group_entity_path(group_id: @group, user_id: @user)
-#   end
+  #   it 'Navigate to add transaction page' do
+  #     click_link('add a new transaction')
+  #     # @group= Group.all
+  #     expect(current_path).to be == user_group_entity_path(group_id: @group, user_id: @user)
+  #   end
 
   it 'Add a new Transaction' do
     click_link('add a new transaction')
