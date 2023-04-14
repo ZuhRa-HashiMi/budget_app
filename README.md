@@ -23,9 +23,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Recipe-app] <a name="about-project"></a>
+# 📖 [Budget-app] <a name="about-project"></a>
 
-The **Recipe app** keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.
+**Budget app** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,11 +52,12 @@ The **Recipe app** keeps track of all your recipes, ingredients, and inventory. 
 
 ### Key Features <a name="key-features"></a>
 
-- **Show list of public and private recipes**
-- **Create Shopping list**
+- **register and log in, so that the data is private to them.**
+- **introduce new transactions associated with a category.**
 - **Authentication**
 - **Authorization**
 - **Interactive Navbar**
+- **The money spent on each category.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,9 +70,9 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 - Ruby (ruby --version)
-- SQLite3 (sqlite3 --version)
+- PostgreSql (postgreSql --version)
 - Node.js (node --version)
-- Yarn (yarn --version)
+- npm (npm --version)
 
 ### Install
 
@@ -92,7 +95,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:shella12/Recipe-app.git
+  git clone https://github.com/ZuhRa-HashiMi/budget_app
 ```
 
 ### Run
@@ -137,17 +140,11 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Ayesha Arshad**
-
-- GitHub: [@shella12](https://github.com/shella12)
-- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
-- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
-
 👤 **Zuhra Hashimi**
 
 - GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
 - LinkedIn: [Zuhra Hashmi](https://www.linkedin.com/in/zuhra-hashimi/)
-
+- AngelList: [zuhra-hashimi](https://wellfound.com/u/zuhra-hashimi)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
