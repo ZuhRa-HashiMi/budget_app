@@ -138,6 +138,8 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 
 <!-- Live Demo -->
 
+## **Live Demo**
+
 - [🚀 Live Demo](https://budget-app-k2i1.onrender.com)
 
 <!-- AUTHORS -->
