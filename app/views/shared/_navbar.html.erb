@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <button class="navbar-toggler navbar-toggle navbar-toggler-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <%= image_tag("humberger.svg", alt: "menu icon", class: "humberger") %>
+    </button>
+    <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Budget App</h5>
+        <button type="button" class="closebtn" data-bs-dismiss="offcanvas" aria-label="Close"><%= image_tag("close.svg", alt: "menu icon", class: "closes") %></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item nav-profile">
+            <%= image_tag @user.avatar, class: 'profile-image' if @user.avatar.attached?%>
+          </li>
+          <li class="nav-item nav-fullname ">
+            <p class="nav-fullname-text"><%= current_user.name%></p>
+          </li>
+          <li class="nav-item nav-links">
+            <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-links'  %>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
